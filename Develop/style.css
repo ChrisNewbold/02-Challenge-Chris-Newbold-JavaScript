@@ -4,10 +4,7 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-.wrapper {
-  height: 100%;
+html {
   margin: 0;
   padding: 0;
 }
@@ -15,12 +12,38 @@ body,
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
+  margin: 0;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1rem;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  font-weight: bold;
+}
+.character-amount-container {
+  display: flex;
+  align-items: center;
+}
+.number-input {
+  width: 4rem;
 }
 
 header {
@@ -28,6 +51,10 @@ header {
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
+}
+h1 {
+  text-align: center;
+  margin: auto;
 }
 
 .card {
@@ -47,7 +74,7 @@ header {
   display: block;
   width: 100%;
   background: #e7e9eb;
-  height: 2px;
+  height: 2rem;
 }
 
 .card-body {
@@ -87,7 +114,9 @@ header {
   text-align: center;
   cursor: pointer;
 }
-
+.btn:hover {
+  background-color: black;
+}
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
@@ -96,8 +125,7 @@ button[disabled] {
 .float-right {
   float: right;
 }
-
-#password {
+.password-display {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -116,6 +144,7 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+  word-break: break-all;
 }
 
 @media (max-width: 690px) {
@@ -124,10 +153,8 @@ button[disabled] {
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
-
-  #password {
+  .password-display {
     font-size: 1rem;
-  }
 }
 
 @media (max-width: 500px) {
@@ -213,8 +240,7 @@ header {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
@@ -234,7 +260,7 @@ button[disabled] {
   float: right;
 }
 
-#password {
+.password-display {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -260,6 +286,7 @@ button[disabled] {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
+    align-items: center;
   }
 
   #password {
@@ -270,5 +297,6 @@ button[disabled] {
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
+    align-items: center;
   }
 }
