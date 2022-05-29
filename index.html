@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Generate your own password with this Password Generator created by Chris
+      Newbold
+    </title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- Password generator box -->
+  <body>
+    <div class="wrapper">
+      <div class="card class-header">
+        <div class="card-body">
+          <h1>Password Generator</h1>
+          <h3 class="password-display" id="passwordDisplay">
+            Your Secure Password
+          </h3>
+          <!-- form class and ID's -->
+          <form id="passwordGeneratorForm" class="form">
+            <label for="characterAmountNumber">Number of Characters</label>
+            <!-- number of characters selector -->
+            <div class="character-amount-container">
+              <input
+                type="range"
+                min="8"
+                max="128"
+                value="0"
+                id="characterAmountRange"
+              />
+              <input
+                class="number-input"
+                type="number"
+                min="8"
+                max="128"
+                value="0"
+                id="characterAmountNumber"
+              />
+            </div>
+            <!-- case, number and symbol selectors -->
+            <label for="includeUppercase">Include Uppercase</label>
+            <input type="checkbox" id="includeUppercase" />
+
+            <label for="includeNumbers">Include Numbers</label>
+            <input type="checkbox" id="includeNumbers" />
+
+            <label for="includeSymbols">Include Symbols</label>
+            <input type="checkbox" id="includeSymbols" />
+            <!-- button -->
+            <button type="submit" class="btn">Generate Password</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>Created by @ChrisNewbold</footer>
+  </body>
+  <!-- end of document -->
+</html>

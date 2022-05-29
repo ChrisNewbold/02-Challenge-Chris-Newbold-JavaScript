@@ -1,0 +1,310 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* html document padding and margin setting it to a default of 0 */
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* determins the body style */
+body {
+  font-family: sans-serif;
+  background-color: #f9fbfd;
+  margin: 0;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* form class determins the uppercase, numbers and symbols layout */
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1rem;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  font-weight: bold;
+}
+.character-amount-container {
+  display: flex;
+  align-items: center;
+}
+/* number class that determins the width of the number input */
+.number-input {
+  width: 3rem;
+}
+/* heading styles */
+header {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(206, 17%, 28%);
+}
+h1 {
+  text-align: center;
+  margin: auto;
+}
+/* card class determining the white surrounding box */
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
+}
+
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2rem;
+}
+
+.card-body {
+  min-height: 100px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #e7e9eb;
+  height: 2px;
+}
+
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* password section class */
+.password-display {
+  /* browser preference */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* browser preference end */
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #c0c7cf;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+  word-break: break-all;
+}
+/* button class */
+.btn {
+  grid-column: span 2;
+  background-color: hsl(360, 91%, 36%);
+  color: white;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+}
+/* button class changing the background color once hovered */
+.btn:hover {
+  background-color: green;
+}
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+
+footer {
+  padding: 3em;
+  height: 100vh;
+  margin-top: auto;
+  line-height: 100px;
+  color: black;
+}
+/* determins element changes at set screen size */
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+  .password-display {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 500px) {
+    .btn {
+      font-size: 0.8rem;
+    }
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  .wrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: sans-serif;
+    background-color: #f9fbfd;
+  }
+
+  .wrapper {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+    color: hsl(206, 17%, 28%);
+  }
+
+  .card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    color: hsl(206, 17%, 28%);
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px 40px;
+  }
+
+  .card-header::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    background: #e7e9eb;
+    height: 2px;
+  }
+
+  .card-body {
+    min-height: 100px;
+  }
+
+  .card-footer {
+    text-align: center;
+  }
+
+  .card-footer::before {
+    content: " ";
+    display: block;
+    width: 100%;
+    background: #e7e9eb;
+    height: 2px;
+  }
+
+  .card-footer::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  .btn {
+    grid-column: span 2;
+    background-color: hsl(360, 91%, 36%);
+    color: white;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+
+  button[disabled] {
+    cursor: default;
+    background: #c0c7cf;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .password-display {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    display: block;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 85px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px dashed #c0c7cf;
+    border-radius: 6px;
+    resize: none;
+    overflow: hidden;
+  }
+  /* determins element changes at set screen size */
+  @media (max-width: 690px) {
+    .btn {
+      font-size: 1rem;
+      margin: 16px 0px 0px 0px;
+      padding: 10px 15px;
+      align-items: center;
+    }
+
+    .password-display {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .btn {
+      font-size: 0.8rem;
+      align-items: center;
+    }
+  }
+}
