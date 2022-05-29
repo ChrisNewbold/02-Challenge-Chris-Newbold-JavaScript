@@ -34,7 +34,7 @@ form.addEventListener('submit', function (e) {
 })
 // this is the over all list of all our character codes that is then looped
 function generatePassword(characterAmount, includeLowercase, includeUppercase, includeNumbers, includeSymbols) {
-  let charCodes = LOWERCASE_CHAR_CODES
+  let charCodes = []
   if (includeLowercase) charCodes = charCodes.concat(LOWERCASE_CHAR_CODES)
   if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
   if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
