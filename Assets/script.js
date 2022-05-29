@@ -45,7 +45,7 @@ function generatePassword(characterAmount, includeLowercase, includeUppercase, i
     const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
     passwordCharacters.push(String.fromCharCode(characterCode))
   }
-  // this is dictating what is returned
+  // this is dictating what is returned from the array
   return passwordCharacters.join('')
 }
 
