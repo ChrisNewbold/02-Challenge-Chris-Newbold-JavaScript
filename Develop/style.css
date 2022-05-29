@@ -3,12 +3,12 @@
 *::after {
   box-sizing: border-box;
 }
-
+/* html document padding and margin setting it to a default of 0 */
 html {
   margin: 0;
   padding: 0;
 }
-
+/* determins the body style */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
@@ -27,6 +27,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
+/* form class determins the uppercase, numbers and symbols layout */
 .form {
   display: grid;
   grid-template-columns: auto auto;
@@ -42,10 +43,11 @@ label {
   display: flex;
   align-items: center;
 }
+/* number class that determins the width of the number input */
 .number-input {
-  width: 4rem;
+  width: 3rem;
 }
-
+/* heading styles */
 header {
   text-align: center;
   padding: 20px;
@@ -56,7 +58,7 @@ h1 {
   text-align: center;
   margin: auto;
 }
-
+/* card class determining the white surrounding box */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -99,36 +101,13 @@ h1 {
   clear: both;
 }
 
-.btn {
-  border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
-  cursor: pointer;
-}
-.btn:hover {
-  background-color: black;
-}
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
-}
+/* password section class */
 .password-display {
+  /* browser preference */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  /* browser preference end */
   border: none;
   display: block;
   width: 100%;
@@ -146,7 +125,27 @@ button[disabled] {
   overflow: hidden;
   word-break: break-all;
 }
-
+/* button class */
+.btn {
+  grid-column: span 2;
+  background-color: hsl(360, 91%, 36%);
+  color: white;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+}
+/* button class changing the background color once hovered */
+.btn:hover {
+  background-color: black;
+}
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+/* determins element changes at set screen size */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -237,18 +236,15 @@ button[disabled] {
   }
 
   .btn {
-    border: none;
+    grid-column: span 2;
     background-color: hsl(360, 91%, 36%);
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px;
-    color: hsl(0, 0%, 100%);
-    display: inline-block;
-    font-size: 22px;
-    line-height: 22px;
+    color: white;
     margin: 16px 16px 16px 20px;
     padding: 14px 34px;
-    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
     cursor: pointer;
+    border-radius: 25px;
   }
 
   button[disabled] {
@@ -280,7 +276,7 @@ button[disabled] {
     resize: none;
     overflow: hidden;
   }
-
+  /* determins element changes at set screen size */
   @media (max-width: 690px) {
     .btn {
       font-size: 1rem;
@@ -289,7 +285,7 @@ button[disabled] {
       align-items: center;
     }
 
-    #password {
+    .password-display {
       font-size: 1rem;
     }
   }
