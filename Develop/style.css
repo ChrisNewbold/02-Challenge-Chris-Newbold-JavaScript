@@ -7,7 +7,9 @@
 html {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
+
 /* determins the body style */
 body {
   font-family: sans-serif;
@@ -16,6 +18,7 @@ body {
   color: black;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -144,6 +147,14 @@ h1 {
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
+}
+
+footer {
+  padding: 3em;
+  height: 100vh;
+  margin-top: auto;
+  line-height: 100px;
+  color: black;
 }
 /* determins element changes at set screen size */
 @media (max-width: 690px) {
