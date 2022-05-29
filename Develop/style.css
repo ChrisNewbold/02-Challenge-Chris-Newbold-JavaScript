@@ -142,7 +142,7 @@ h1 {
 }
 /* button class changing the background color once hovered */
 .btn:hover {
-  background-color: black;
+  background-color: green;
 }
 button[disabled] {
   cursor: default;

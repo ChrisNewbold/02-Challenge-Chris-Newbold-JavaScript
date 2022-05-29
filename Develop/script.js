@@ -21,7 +21,7 @@ const SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
 characterAmountNumber.addEventListener('input', syncCharacterAmount)
 characterAmountRange.addEventListener('input', syncCharacterAmount)
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', function (e) {
   e.preventDefault()
   const characterAmount = characterAmountNumber.value
   const includeUppercase = includeUppercaseElement.checked

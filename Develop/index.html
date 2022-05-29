@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
+    <title>
+      Generate your own password with this Password Generator created by Chris
+      Newbold
+    </title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <!-- Password generator box -->
   <body>
     <div class="wrapper">
       <div class="card class-header">
@@ -16,8 +20,10 @@
           <h3 class="password-display" id="passwordDisplay">
             Your Secure Password
           </h3>
+          <!-- form class and ID's -->
           <form id="passwordGeneratorForm" class="form">
             <label for="characterAmountNumber">Number of Characters</label>
+            <!-- number of characters selector -->
             <div class="character-amount-container">
               <input
                 type="range"
@@ -35,6 +41,7 @@
                 id="characterAmountNumber"
               />
             </div>
+            <!-- case, number and symbol selectors -->
             <label for="includeUppercase">Include Uppercase</label>
             <input type="checkbox" id="includeUppercase" />
 
@@ -49,7 +56,8 @@
         </div>
       </div>
     </div>
-    <footer>Created by Chris Newbold</footer>
+    <!-- footer -->
+    <footer>Created by @ChrisNewbold</footer>
   </body>
   <!-- end of document -->
 </html>
