@@ -19,9 +19,14 @@
       <div class="card class-header">
         <div class="card-body">
           <h1>Password Generator</h1>
-          <h3 class="password-display" id="passwordDisplay">
-            Your Secure Password
-          </h3>
+          <section class="clipboardwrap">
+            <h3 class="password-display" id="passwordDisplay">
+              Your Secure Password
+            </h3>
+              <img class="copybutton" id="clipboard"
+              src="/Assets/Images/clipboard image.svg"
+            ></a>
+          </section>
           <!-- form class and ID's -->
           <form id="passwordGeneratorForm" class="form">
             <label for="characterAmountNumber">Number of Characters</label>
@@ -45,16 +50,16 @@
             </div>
             <!-- Lowercase selectors -->
             <label for="includeLowercase">Include Lowercase</label>
-            <input type="checkbox" id="includeLowercase" />
+            <input type="checkbox" id="includeLowercase" name="one" value="1" />
             <!-- Uppercase selectors -->
             <label for="includeUppercase">Include Uppercase</label>
-            <input type="checkbox" id="includeUppercase" />
+            <input type="checkbox" id="includeUppercase" name="two" value="2" />
             <!-- Number selectors -->
             <label for="includeNumbers">Include Numbers</label>
-            <input type="checkbox" id="includeNumbers" />
+            <input type="checkbox" id="includeNumbers" name="three" value="3" />
             <!-- Symbol selectors -->
             <label for="includeSymbols">Include Symbols</label>
-            <input type="checkbox" id="includeSymbols" />
+            <input type="checkbox" id="includeSymbols" name="four" value="4" />
             <!-- button -->
             <button type="submit" class="btn">Generate Password</button>
           </form>

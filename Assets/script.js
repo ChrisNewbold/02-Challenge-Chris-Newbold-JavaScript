@@ -24,6 +24,11 @@ characterAmountRange.addEventListener('input', syncCharacterAmount)
 // this is what generates the password submition
 form.addEventListener('submit', function (e) {
   e.preventDefault()
+  // This section creates a pop up prompting the user to select a tick box
+  if (!form.one.checked && !form.two.checked
+    && !form.three.checked && !form.four.checked) {
+    alert('at least one box must be checked')
+  }
   const characterAmount = characterAmountNumber.value
   const includeLowercase = includeLowercaseElement.checked
   const includeUppercase = includeUppercaseElement.checked
@@ -35,10 +40,10 @@ form.addEventListener('submit', function (e) {
 // this is the over all list of all our character codes that is then looped
 function generatePassword(characterAmount, includeLowercase, includeUppercase, includeNumbers, includeSymbols) {
   let charCodes = []
-  if (includeLowercase) charCodes = charCodes.concat(LOWERCASE_CHAR_CODES)
-  if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
-  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
-  if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
+  if (includeLowercase) charCodes = charCodes.concat(LOWERCASE_CHAR_CODES), includeLowercaseElement.checked = false
+  if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES), includeUppercaseElement.checked = false
+  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES), includeSymbolsElement.checked = false
+  if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES), includeNumbersElement.checked = false;
   // this creates the loop
   const passwordCharacters = []
   for (let i = 0; i < characterAmount; i++) {
@@ -62,3 +67,17 @@ function syncCharacterAmount(e) {
   characterAmountNumber.value = value
   characterAmountRange.value = value
 }
+
+clipboard.addEventListener('click', () => {
+  const textarea = document.createElement('textarea');
+  const password = passwordDisplay.innerText;
+
+  if (!password) { return; }
+
+  textarea.value = password;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  textarea.remove();
+  alert('Password copied to clipboard');
+});
