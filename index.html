@@ -15,10 +15,9 @@
   </head>
   <!-- Password generator box -->
   <body>
-    <div class="wrapper">
-      <div class="card class-header">
+      <main class="card class-header">
         <div class="card-body">
-          <h1>Password Generator</h1>
+         <header><h1>Password Generator</h1></header>
           <section class="clipboardwrap">
             <h3 class="password-display" id="passwordDisplay">
               Your Secure Password
@@ -31,7 +30,8 @@
           <form id="passwordGeneratorForm" class="form">
             <label for="characterAmountNumber">Number of Characters</label>
             <!-- number of characters selector -->
-            <div class="character-amount-container">
+            <section class="character-amount-container">
+              <!-- determins the number of character range with it auto setting to "0" to prompt the customer to select an amount -->
               <input
                 type="range"
                 min="8"
@@ -47,7 +47,7 @@
                 value="0"
                 id="characterAmountNumber"
               />
-            </div>
+            </section>
             <!-- Lowercase selectors -->
             <label for="includeLowercase">Include Lowercase</label>
             <input type="checkbox" id="includeLowercase" name="one" value="1" />
@@ -63,9 +63,8 @@
             <!-- button -->
             <button type="submit" class="btn">Generate Password</button>
           </form>
-        </div>
       </div>
-    </div>
+      </main>
     <!-- footer -->
     <footer>Created by @ChrisNewbold</footer>
   </body>
