@@ -27,7 +27,7 @@ form.addEventListener("submit", function (e) {
   e.preventDefault()//this prevents the default action of the form which is to submit the data
   // This "if" section creates a pop up prompting the user to select a tick box. 
   if (!form.includeLowercase.checked && !form.includeUppercase.checked
-    && !form.includeNumbers.checked && !form.includeSymbols.checked) {
+    && !form.includeSymbols.checked && !form.includeNumbers.checked) {
     alert("at least one box must be checked")
   }
   // this tells us if its true or false if button is checked and speaks to the character amount passing the value
