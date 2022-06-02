@@ -24,10 +24,10 @@ characterAmountNumber.addEventListener("input", syncCharacterAmount)
 characterAmountRange.addEventListener("input", syncCharacterAmount)
 // this event listener triggers everytime we submit the form and will prevent the form from submitting and resetting the page
 form.addEventListener("submit", function (e) {
-  e.preventDefault()//this prevents any charCodes from being auto called
+  e.preventDefault()//this prevents the default action of the form which is to submit the data
   // This "if" section creates a pop up prompting the user to select a tick box. 
-  if (!form.one.checked && !form.two.checked
-    && !form.three.checked && !form.four.checked) {
+  if (!form.includeLowercase.checked && !form.includeUppercase.checked
+    && !form.includeNumbers.checked && !form.includeSymbols.checked) {
     alert("at least one box must be checked")
   }
   // this tells us if its true or false if button is checked and speaks to the character amount passing the value
@@ -43,10 +43,10 @@ form.addEventListener("submit", function (e) {
 // this uses charCodes to return our unicode and tells it what to include "if". So essentially tells it what to generate the password from
 function generatePassword(characterAmount, includeLowercase, includeUppercase, includeNumbers, includeSymbols) {
   let charCodes = [] // this sets our charCode default to zero
-  if (includeLowercase) charCodes = charCodes.concat(LOWERCASE_CHAR_CODES), includeLowercaseElement.checked = false //this end section (post "),") calls the pop up value if tick boxes = false
-  if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES), includeUppercaseElement.checked = false
-  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES), includeSymbolsElement.checked = false
-  if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES), includeNumbersElement.checked = false;
+  if (includeLowercase) charCodes = charCodes.concat(LOWERCASE_CHAR_CODES), includeLowercaseElement.checked = false // this resets the check box to being unchecked
+  if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES), includeUppercaseElement.checked = false // this resets the check box to being unchecked
+  if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES), includeSymbolsElement.checked = false // this resets the check box to being unchecked
+  if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES), includeNumbersElement.checked = false; // this resets the check box to being unchecked
   // this creates the loop
   const passwordCharacters = [] // this is a empty array that stores all our passwords
   for (let i = 0; i < characterAmount; i++) {
